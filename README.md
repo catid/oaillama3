@@ -6,13 +6,18 @@ These instructions will work for Ubuntu Linux servers with 1-2 Nvidia GPUs.  Mig
 
 Example video of what you can do with this here: [https://x.com/MrCatid/status/1744440953731985433?s=20
 ](https://x.com/MrCatid/status/1744441977452609857?s=20)
+
 ## Setup
 
+Install conda from https://docs.conda.io/projects/miniconda/en/latest/
+
 ```bash
+# Install git large file support
+sudo apt install git git-lfs
+git lfs install
+
 git clone https://github.com/theroyallab/tabbyAPI.git
 cd tabbyAPI
-
-git lfs install
 
 # For one 3090/4090 GPU:
 #git clone --branch 3.5bpw https://huggingface.co/turboderp/Mixtral-8x7B-instruct-exl2
