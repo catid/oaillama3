@@ -11,6 +11,8 @@ Example video of what you can do with this here: [https://x.com/MrCatid/status/1
 
 Install conda from https://docs.conda.io/projects/miniconda/en/latest/
 
+Then you can literally copy/paste this into a terminal to provision a server:
+
 ```bash
 # Install git large file support
 sudo apt install git git-lfs
