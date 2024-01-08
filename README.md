@@ -19,12 +19,14 @@ git lfs install
 git clone https://github.com/theroyallab/tabbyAPI.git
 cd tabbyAPI
 
+cd models
+
 # For one 3090/4090 GPU:
 #git clone --branch 3.5bpw https://huggingface.co/turboderp/Mixtral-8x7B-instruct-exl2
 
 # For two 4090 GPUs (my setup):
-cd models
 git clone --branch 6.0bpw https://huggingface.co/turboderp/Mixtral-8x7B-instruct-exl2
+
 cd ..
 
 # Install Python dependencies
