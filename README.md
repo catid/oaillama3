@@ -4,8 +4,8 @@ Simple setup to self-host Mixtral model with an OpenAI API.  I'd put this in a b
 
 These instructions will work for Ubuntu Linux servers with 1-2 Nvidia GPUs.  Might work for other setups.
 
-Example video of what you can do with this here: https://x.com/MrCatid/status/1744440953731985433?s=20
-
+Example video of what you can do with this here: [https://x.com/MrCatid/status/1744440953731985433?s=20
+](https://x.com/MrCatid/status/1744441977452609857?s=20)
 ## Setup
 
 ```bash
