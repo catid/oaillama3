@@ -51,7 +51,16 @@ The `mixtral.jinja` file overrides the tokenizer config in the Mixtral model so 
 
 It prints the API key to the console and is also available via `api_tokens.yml`.  This replaces your normal OpenAI API key.  To reference the server specify API host = `http://gpu5.lan:5000`, replacing `gpu5.lan` with the name of your Linux server.
 
-To use your server with the OpenAI Python API:
+To use your server from the older OpenAI Python completions API:
+
+```
+openai.api_base = "http://devnuc.lan:5000/v1"
+openai.api_key = api_key_from_api_tokens_yml
+```
+
+If you're editing someone else's code search for "openai.api_key" and if you find it then use the above method.  This is the most common way to adapt a script.
+
+To use your server from the newer OpenAI Python API:
 
 ```python
 # OpenAI
