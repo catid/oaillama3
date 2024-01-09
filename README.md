@@ -7,7 +7,7 @@ These instructions will work for Ubuntu Linux servers with 1-2 Nvidia GPUs.  Mig
 Example video of what you can do with this here: [https://x.com/MrCatid/status/1744440953731985433?s=20
 ](https://x.com/MrCatid/status/1744441977452609857?s=20)
 
-The following setup is optimal for *most* use-cases.  Most scripts and application using LLMs make one query at a time, and for that very common use-case the `tabbyAPI/exllamav2` inference engine runs the fastest.  For client scripts that make many parallel LLM requests like "tree of thought" type agentic behavior, vLLM would provide much higher throughput.
+The following setup is optimal for *most* use-cases.  Most scripts and applications using LLMs make one query at a time, and for that very common use-case this `tabbyAPI/exllamav2` inference engine runs the fastest.  For client scripts that make *many* parallel LLM requests like "tree of thought" type agentic behavior, vLLM would provide much higher throughput.
 
 ## Setup
 
