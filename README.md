@@ -7,6 +7,8 @@ These instructions will work for Ubuntu Linux servers with 1-2 Nvidia GPUs.  Mig
 Example video of what you can do with this here: [https://x.com/MrCatid/status/1744440953731985433?s=20
 ](https://x.com/MrCatid/status/1744441977452609857?s=20)
 
+The following setup is optimal for *most* use-cases.  Most scripts and application using LLMs make one query at a time, and for that very common use-case the `tabbyAPI/exllamav2` inference engine runs the fastest.  For client scripts that make many parallel LLM requests like "tree of thought" type agentic behavior, vLLM would provide much higher throughput.
+
 ## Setup
 
 Install conda from https://docs.conda.io/projects/miniconda/en/latest/
@@ -58,6 +60,8 @@ client = OpenAI(api_key=api_key_from_api_tokens_yml, base_url="http://gpu5.lan:5
 ```
 
 again replacing the server name and API key with the one from your server.
+
+If you have multiple GPU servers you can put a HAProxy in front of the cluster if the API keys are the same: Just copy one api_tokens.yml to all the othe rmachines, and restart all the start.sh scripts.  To set up HAProxy just ask your Mixtral model for instructions. :)
 
 ## References
 
