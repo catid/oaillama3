@@ -61,7 +61,7 @@ client = OpenAI(api_key=api_key_from_api_tokens_yml, base_url="http://gpu5.lan:5
 
 again replacing the server name and API key with the one from your server.
 
-If you have multiple GPU servers you can put a HAProxy in front of the cluster if the API keys are the same: Just copy one api_tokens.yml to all the othe rmachines, and restart all the start.sh scripts.  To set up HAProxy just ask your Mixtral model for instructions. :)
+If you have multiple GPU servers you can put a HAProxy in front of the cluster if the API keys are the same: Just copy one `api_tokens.yml` to all the other machines, and restart all the `start.sh` scripts.  To set up HAProxy just ask your Mixtral model for instructions. :)
 
 ## References
 
