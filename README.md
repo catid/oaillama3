@@ -72,6 +72,27 @@ again replacing the server name and API key with the one from your server.
 
 If you have multiple GPU servers you can put a HAProxy in front of the cluster if the API keys are the same: Just copy one `api_tokens.yml` to all the other machines, and restart all the `start.sh` scripts.  To set up HAProxy just ask your Mixtral model for instructions. :)
 
+
+## HAProxy tuning
+
+Adding maxconn helped spread the load better: `sudo vi /etc/haproxy/haproxy.cfg`
+
+```
+frontend http_front
+        bind *:5000
+        default_backend http_back
+
+backend http_back
+        balance roundrobin
+        server gpu1 gpu1.lan:5000 check maxconn 6
+        server gpu2 gpu2.lan:5000 check maxconn 6
+        server gpu3 gpu3.lan:5000 check maxconn 6
+        server gpu4 gpu4.lan:5000 check maxconn 6
+        server gpu5 gpu5.lan:5000 check maxconn 6
+        server gpu6 gpu6.lan:5000 check maxconn 6
+```
+
+
 ## References
 
 This uses the mixtral.jinja suggested by TabbyAPI discord: https://github.com/theroyallab/llm-prompt-templates
