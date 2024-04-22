@@ -2,6 +2,8 @@
 
 Simple setup to self-host LLaMA3-70B model with an OpenAI API.  I'd put this in a blog post but I want to attach some files so I guess a github repo makes more sense.
 
+To clarify, it is fairly easy to get these models to run.. for a while.  Some additional tweaks are needed to avoid the inference engine running out of memory and dying.  vLLM keeps crashing with AutoAWQ quantized versions for example.  The exllamav2 configuration shared here works around the issue.
+
 These instructions will work for Ubuntu Linux servers with 2 Nvidia GPUs.  Might work for other setups.
 
 Right now this is the best quantized version that can fit on two cards.  Probably the quality is not as good as it can get.  I'd like to see Quip# or AQLM versions.
