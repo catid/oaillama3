@@ -37,6 +37,7 @@ cd ..
 conda create -n oai python=3.10 -y && conda activate oai
 
 # Download this config file to fix autosplit_reserve in config.yml
+rm -f config.yml
 wget https://raw.githubusercontent.com/catid/oaillama3/main/config.yml
 
 ./start.sh
