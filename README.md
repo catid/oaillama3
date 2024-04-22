@@ -1,4 +1,4 @@
-# oaimixtral
+# oaillama3
 
 Simple setup to self-host LLaMA3-70B model with an OpenAI API.  I'd put this in a blog post but I want to attach some files so I guess a github repo makes more sense.
 
