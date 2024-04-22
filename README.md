@@ -25,7 +25,7 @@ cd tabbyAPI
 cd models
 
 # For two 4090 GPUs (my setup):
-git clone --branch 4.0bpw https://huggingface.co/turboderp/Llama-3-70B-exl2
+git clone https://huggingface.co/LoneStriker/Meta-Llama-3-70B-4.65bpw-h6-exl2
 
 cd ..
 
