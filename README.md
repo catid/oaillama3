@@ -27,6 +27,10 @@ cd models
 # For two 4090 GPUs (my setup):
 git clone https://huggingface.co/LoneStriker/Meta-Llama-3-70B-Instruct-4.0bpw-h6-exl2
 
+# Fix a bug in the model
+wget https://raw.githubusercontent.com/catid/oaillama3/main/generation_config.json
+mv generation_config.json Meta-Llama-3-70B-Instruct-4.0bpw-h6-exl2/generation_config.json
+
 cd ..
 
 # Install Python dependencies
