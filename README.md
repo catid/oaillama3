@@ -36,7 +36,7 @@ cd ..
 # Install Python dependencies
 conda create -n oai python=3.10 -y && conda activate oai
 
-# Grab some config files from here to save time
+# Download this config file to fix autosplit_reserve in config.yml
 wget https://raw.githubusercontent.com/catid/oaillama3/main/config.yml
 
 ./start.sh
