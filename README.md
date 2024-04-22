@@ -6,7 +6,7 @@ These instructions will work for Ubuntu Linux servers with 2 Nvidia GPUs.  Might
 
 Right now this is the best quantized version that can fit on two cards.  Probably the quality is not as good as it can get.  I'd like to see Quip# or AQLM versions.
 
-Using my TextWorld reasoning benchmark, it scores a 4.12/5, which is similar to GPT-4 and better than GPT-3.5 and all other models.
+Using my TextWorld reasoning benchmark, it scores a 4.12/5, which is similar to GPT-4 and better than GPT-3.5 and all other models.  The quality should improve as better quantizations are released and the context length is improved.
 
 ## Setup
 
