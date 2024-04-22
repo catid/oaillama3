@@ -36,7 +36,7 @@ model:
   # An initial model to load. Make sure the model is located in the model directory!
   # A model can be loaded later via the API.
   # REQUIRED: This must be filled out to load a model on startup!
-  model_name: Mixtral-8x7B-instruct-exl2
+  model_name: Llama-3-70B-exl2
 
   # Sends dummy model names when the models endpoint is queried
   # Enable this if the program is looking for a specific OAI model
@@ -78,7 +78,7 @@ model:
 
   # Set the prompt template for this model. If empty, chat completions will be disabled. (default: Empty)
   # NOTE: Only works with chat completion message lists!
-  prompt_template: mixtral
+  #prompt_template: llama
 
   # Number of experts to use PER TOKEN. Fetched from the model's config.json if not specified (default: Empty)
   # WARNING: Don't set this unless you know what you're doing!
