@@ -2,11 +2,11 @@
 
 Simple setup to self-host LLaMA3-70B model with an OpenAI API.  I'd put this in a blog post but I want to attach some files so I guess a github repo makes more sense.
 
-These instructions will work for Ubuntu Linux servers with 1-2 Nvidia GPUs.  Might work for other setups.
+These instructions will work for Ubuntu Linux servers with 2 Nvidia GPUs.  Might work for other setups.
 
-Right now this is the best 
+Right now this is the best quantized version that can fit on two cards.  Probably the quality is not as good as it can get.  I'd like to see Quip# or AQLM versions.
 
-The benchmark task is to complete 5 quests in Microsoft TextWorld: https://github.com/microsoft/TextWorld
+Using my TextWorld reasoning benchmark, it scores a 4.12/5, which is similar to GPT-4 and better than GPT-3.5 and all other models.
 
 ## Setup
 
