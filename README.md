@@ -27,12 +27,7 @@ wget https://raw.githubusercontent.com/catid/oaillama3/main/config.yml
 cd models
 
 # For two 4090 GPUs (my setup):
-git clone --branch 4.5bpw https://huggingface.co/turboderp/Llama-3-70B-Instruct-exl2
-
-# Add "eos_token": "<|eot_id|>", fix
-wget https://raw.githubusercontent.com/catid/oaillama3/main/tokenizer_config.json
-
-mv tokenizer_config.json Llama-3-70B-Instruct-exl2/generation_config.json
+git clone https://huggingface.co/LoneStriker/Meta-Llama-3-70B-Instruct-4.65bpw-h6-exl2
 
 cd ..
 

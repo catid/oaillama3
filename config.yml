@@ -36,7 +36,7 @@ model:
   # An initial model to load. Make sure the model is located in the model directory!
   # A model can be loaded later via the API.
   # REQUIRED: This must be filled out to load a model on startup!
-  model_name: Llama-3-70B-Instruct-exl2
+  model_name: Meta-Llama-3-70B-Instruct-4.65bpw-h6-exl2
 
   # Sends dummy model names when the models endpoint is queried
   # Enable this if the program is looking for a specific OAI model
@@ -55,7 +55,7 @@ model:
 
   # Automatically allocate resources to GPUs (default: True)
   gpu_split_auto: True
-  autosplit_reserve: [768]
+  autosplit_reserve: [512]
 
   # An integer array of GBs of vram to split between GPUs (default: [])
   #gpu_split: [20.6, 24]
