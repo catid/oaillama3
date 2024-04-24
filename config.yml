@@ -36,7 +36,7 @@ model:
   # An initial model to load. Make sure the model is located in the model directory!
   # A model can be loaded later via the API.
   # REQUIRED: This must be filled out to load a model on startup!
-  model_name: Meta-Llama-3-70B-Instruct-4.0bpw-h6-exl2
+  model_name: Llama-3-70B-Instruct-exl2
 
   # Sends dummy model names when the models endpoint is queried
   # Enable this if the program is looking for a specific OAI model
@@ -46,7 +46,7 @@ model:
 
   # Max sequence length (default: Empty)
   # Fetched from the model's base sequence length in config.json by default
-  #max_seq_len:
+  max_seq_len: 32768
 
   # Overrides base model context length (default: Empty)
   # WARNING: Don't set this unless you know what you're doing!
@@ -64,7 +64,7 @@ model:
   # Same thing as compress_pos_emb
   # Only use if your model was trained on long context with rope (check config.json)
   # Leave blank to pull the value from the model
-  #rope_scale: 1.0
+  #rope_scale: 4000000.0
 
   # Rope alpha (default: 1.0)
   # Same thing as alpha_value
@@ -75,7 +75,7 @@ model:
   #no_flash_attention: False
 
   # Enable 8 bit cache mode for VRAM savings (slight performance hit). Possible values FP16, FP8. (default: FP16)
-  #cache_mode: FP16
+  cache_mode: Q4
 
   # Set the prompt template for this model. If empty, chat completions will be disabled. (default: Empty)
   # NOTE: Only works with chat completion message lists!

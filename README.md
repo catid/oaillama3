@@ -24,23 +24,26 @@ git lfs install
 git clone https://github.com/theroyallab/tabbyAPI.git
 cd tabbyAPI
 
+# Config file to make exllamav2 work
+rm -f config.yml
+wget https://raw.githubusercontent.com/catid/oaillama3/main/config.yml
+
 cd models
 
 # For two 4090 GPUs (my setup):
-git clone https://huggingface.co/LoneStriker/Meta-Llama-3-70B-Instruct-4.0bpw-h6-exl2
+git clone --branch 4.5bpw https://huggingface.co/turboderp/Llama-3-70B-Instruct-exl2
 
-# Fix a bug in the model
-wget https://raw.githubusercontent.com/catid/oaillama3/main/generation_config.json
-mv generation_config.json Meta-Llama-3-70B-Instruct-4.0bpw-h6-exl2/generation_config.json
+# Increase model context length to 32k, add "eos_token": "<|eot_id|>", fix
+wget https://raw.githubusercontent.com/catid/oaillama3/main/tokenizer_config.json
+wget https://raw.githubusercontent.com/catid/oaillama3/main/config.json
+
+mv tokenizer_config.json Llama-3-70B-Instruct-exl2/generation_config.json
+mv config.json Llama-3-70B-Instruct-exl2/generation_config.json
 
 cd ..
 
 # Install Python dependencies
 conda create -n oai python=3.10 -y && conda activate oai
-
-# Download this config file to fix autosplit_reserve in config.yml
-rm -f config.yml
-wget https://raw.githubusercontent.com/catid/oaillama3/main/config.yml
 
 ./start.sh
 ```
