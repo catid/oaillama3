@@ -1,6 +1,6 @@
 # oaillama3
 
-Simple setup to self-host full quality LLaMA3-70B model with an OpenAI API, on 2x3090/4090 GPUs.
+Simple setup to self-host full quality LLaMA3-70B model at 4.65 bpw quantization with an OpenAI API, on 2x3090/4090 GPUs.
 
 To clarify, it is fairly easy to get these models to run.. for a while.  Some additional tweaks are needed to avoid the inference engine running out of memory and dying.  vLLM keeps crashing with AutoAWQ quantized versions for example.  The exllamav2 configuration shared here works around the issue.
 
