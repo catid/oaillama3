@@ -1,8 +1,8 @@
 # oaillama3
 
-Simple setup to self-host full quality LLaMA3-70B model with 32K context with an OpenAI API, on 2x3090/4090 GPUs.
+Simple setup to self-host full quality LLaMA3-70B model with 16K context with an OpenAI API, on 2x3090/4090 GPUs.
 
-To clarify, it is fairly easy to get these models to run.. for a while.  Some additional tweaks are needed to avoid the inference engine running out of memory and dying.  vLLM keeps crashing with AutoAWQ quantized versions for example.  The exllamav2 configuration shared here works around the issue.  Also I added 32K context (default is 8KB).
+To clarify, it is fairly easy to get these models to run.. for a while.  Some additional tweaks are needed to avoid the inference engine running out of memory and dying.  vLLM keeps crashing with AutoAWQ quantized versions for example.  The exllamav2 configuration shared here works around the issue.  Also I added 16K context (default is 8KB).
 
 Using my TextWorld reasoning benchmark, it scores a 4.12/5, which is similar to GPT-4 and better than GPT-3.5 and all other models.  The quality should improve as better quantizations are released and the context length is improved.
 

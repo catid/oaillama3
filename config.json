@@ -19,7 +19,7 @@
     "pretraining_tp": 1,
     "rms_norm_eps": 1e-05,
     "rope_scaling": null,
-    "rope_theta": 4000000.0,
+    "rope_theta": 2000000.0,
     "tie_word_embeddings": false,
     "torch_dtype": "bfloat16",
     "transformers_version": "4.40.0.dev0",
