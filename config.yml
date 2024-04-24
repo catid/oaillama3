@@ -46,7 +46,7 @@ model:
 
   # Max sequence length (default: Empty)
   # Fetched from the model's base sequence length in config.json by default
-  max_seq_len: 32768
+  max_seq_len: 32000
 
   # Overrides base model context length (default: Empty)
   # WARNING: Don't set this unless you know what you're doing!
@@ -55,7 +55,7 @@ model:
 
   # Automatically allocate resources to GPUs (default: True)
   gpu_split_auto: True
-  autosplit_reserve: [1024]
+  autosplit_reserve: [768]
 
   # An integer array of GBs of vram to split between GPUs (default: [])
   #gpu_split: [20.6, 24]
@@ -75,7 +75,7 @@ model:
   #no_flash_attention: False
 
   # Enable 8 bit cache mode for VRAM savings (slight performance hit). Possible values FP16, FP8. (default: FP16)
-  cache_mode: Q4
+  cache_mode: FP8
 
   # Set the prompt template for this model. If empty, chat completions will be disabled. (default: Empty)
   # NOTE: Only works with chat completion message lists!
