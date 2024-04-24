@@ -46,7 +46,7 @@ model:
 
   # Max sequence length (default: Empty)
   # Fetched from the model's base sequence length in config.json by default
-  max_seq_len: 16768
+  #max_seq_len: 16768
 
   # Overrides base model context length (default: Empty)
   # WARNING: Don't set this unless you know what you're doing!
